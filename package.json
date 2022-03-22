@@ -1,14 +1,22 @@
 {
   "license": "MIT",
   "scripts": {
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "test": "ts-node ./src/test.ts"
   },
   "dependencies": {
+    "eslint": "^8.11.0",
     "monaco-editor": "^0.33.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.22",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
     "css-loader": "^6.7.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eqeqeq-fix": "^1.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "gts": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "monaco-editor-webpack-plugin": "^7.0.1",
