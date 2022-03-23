@@ -3,7 +3,11 @@
   "compilerOptions": {
     "outDir": "build",
     "esModuleInterop": true,
-    "lib": ["DOM"]
+    "lib": ["DOM"],
+    "typeRoots": [
+      "src/@types",
+      "node_modules/@types"
+    ],
   },
   "include": [
     "src/**/*.ts",
