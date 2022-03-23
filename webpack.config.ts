@@ -21,6 +21,10 @@ const config: Configuration = {
   module: {
     rules: [
       {
+        test: /\.ts$/,
+        use: ['ts-loader'],
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
@@ -29,6 +33,21 @@ const config: Configuration = {
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
+    fallback: {
+      path: require.resolve('path-browserify'),
+      os: require.resolve('os-browserify/browser'),
+      assert: require.resolve('assert/'),
+      url: require.resolve('url/'),
+      util: require.resolve('util/'),
+      stream: require.resolve('stream-browserify'),
+      crypto: require.resolve('crypto-browserify'),
+      buffer: require.resolve('buffer/'),
+      fs: false,
+      module: false,
+    },
   },
 };
 

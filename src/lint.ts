@@ -27,7 +27,7 @@ linter.defineParser('@typescript-eslint/parser', {
   parseForESLint: parseForESLint as any,
 });
 
-const lint = async (code: string) => {
+const lint = (code: string) => {
   const result = linter.verify(code, {
     rules,
     parser: '@typescript-eslint/parser',
