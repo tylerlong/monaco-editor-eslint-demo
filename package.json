@@ -2,7 +2,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "webpack serve",
-    "test": "ts-node ./src/test.ts"
+    "test": "ts-node ./src/test.ts",
+    "build": "rm -rf docs && webpack"
   },
   "dependencies": {
     "eslint": "^8.11.0",
