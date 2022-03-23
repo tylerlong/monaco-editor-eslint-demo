@@ -1,9 +1,10 @@
 {
   "license": "MIT",
   "scripts": {
-    "serve": "webpack serve",
+    "serve": "yarn rules && webpack serve",
     "test": "ts-node ./src/test.ts",
-    "build": "rm -rf docs && webpack"
+    "build": "yarn rules && rm -rf docs && webpack",
+    "rules": "ts-node ./src/generate-rules"
   },
   "dependencies": {
     "eslint": "^8.11.0",
